@@ -31,8 +31,8 @@ sudo sh docker-install.sh
 ```
 In some moments, the script can ask you to confirm due overwrite the previous localy saved GPG key. You can overwrite (recomended) or put a new name path for file.
 
-> Restart the WSL (or the machine itself) after installation complete
-> ```bash
+> Restart the WSL (or the machine itself) after installation complete. This command must be run on Windows command `cmd.exe` or `PowerShell`
+> ```shell
 > wsl --shutdown && wsl
 > ```
 
@@ -42,22 +42,18 @@ Maybe additional steps must be necessary if issues like permissions or network f
 ### Short optional commands
 #### Permission issues
 ```bash
-$ sudo groupadd docker
-$ sudo usermod -aG docker $USER
+sudo groupadd docker
+sudo usermod -aG docker $USER
 ````
-Logout or restart the WSL using `cmd.exe` or `PowerShell`
-```bash
-$ wsl --shutdown && wsl
-```
 
 If you see error like:
-```
+```bash
 # WARNING: Error loading config file: /home/user/.docker/config.json -
 ```
 Than change permission to `.docker` folder
 ```bash
-$ sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
-$ sudo chmod g+rwx "$HOME/.docker" -R
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
 ```
 
 #### Network
@@ -68,6 +64,11 @@ if you experience some network problems as like "host unreachable", add/edit the
 }
 ```
 This are Google DNS resolver, you are free to use another, if work for you.
+
+Logout or restart the WSL using `cmd.exe` or `PowerShell`
+```bash
+wsl --shutdown && wsl
+```
 
 ## Additional Info
 If this script doesn't resolve your problem, you can open a issue or use a docker automated script on https://github.com/docker/docker-install.
