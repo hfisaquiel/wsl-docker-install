@@ -12,6 +12,9 @@ The docker-install.sh is a script based on Docker documentation https://docs.doc
 
 Important to be aware, this script will remove old Docker installations as Docker Engine and oldest docker.io, as terraform to new installations, preventing incompatibilities issues.
 
+## **BEFORE YOU CONTINUE**
+It's recommended you to shutdown the Docker Desktop before run this script.
+
 ## Using this script
 > Must elevated permission as root or sudo (the current user must in the sudoers list), in order to remove and install dependencies.
 
@@ -27,6 +30,11 @@ Download the file [docker-install.sh](docker-install.sh) or clone this [reposito
 sudo sh docker-install.sh
 ```
 In some moments, the script can ask you to confirm due overwrite the previous localy saved GPG key. You can overwrite (recomended) or put a new name path for file.
+
+> Restart the WSL (or the machine itself) after installation complete
+> ```bash
+> wsl --shutdown && wsl
+> ```
 
 ## Post Installation
 Maybe additional steps must be necessary if issues like permissions or network fail. You can read about at [Docker post-installation](https://docs.docker.com/engine/install/linux-postinstall/) page.
@@ -62,7 +70,7 @@ if you experience some network problems as like "host unreachable", add/edit the
 This are Google DNS resolver, you are free to use another, if work for you.
 
 ## Additional Info
-if this script doesn't resolve your problem, you can open a issue or use a docker automated script on https://github.com/docker/docker-install.
+If this script doesn't resolve your problem, you can open a issue or use a docker automated script on https://github.com/docker/docker-install.
 
 ## Another things
 Open a issue or contribute with this repo opening a new PR.
