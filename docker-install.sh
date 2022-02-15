@@ -11,7 +11,7 @@ apt remove -y docker docker.io containerd runc
 echo ''
 echo '\e[1;34;1mRemove previous outadated docker engine\e[0m'
 set +e
-apt remove -y -q docker-engine
+apt remove -y -q docker-engine || true
 set -e
 
 echo ''
