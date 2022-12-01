@@ -1,16 +1,17 @@
 # WSL Docker Install
-Script who will free you to keep using Windows with WSL!
+Script who will free you to keep using Windows with WSL without Docker Desktop!
 
 ## Dependencies
   - SO Linux Ubuntu/Debian
-  - Apt Install Manager
+  - Advanced Package Tool (Apt) Install Manager
 
 > Tested on WSL2 using Ubuntu 18.04/20.04/21.04 distros
 
 ## How this work
-The docker-install.sh is a script based on Docker documentation https://docs.docker.com/engine/install/ubuntu/.
+The 'docker-install.sh' is a script based on Docker documentation https://docs.docker.com/engine/install/ubuntu/, for a clean and direct installation on a Linux instance, without the dependency of Docker Desktop, less network traffic outside of WSL and reduce processing resource use.
 
 Important to be aware, this script will remove old Docker installations as Docker Engine and oldest docker.io, as terraform to new installations, preventing incompatibilities issues.
+If you want a interface and easy management, keep using the Docker Desktop with WSL integration.
 
 ## **BEFORE YOU CONTINUE**
 It's recommended you to shutdown the Docker Desktop before run this script.
