@@ -6,7 +6,7 @@ echo '\e[1;34;1mSee complete documentation on \e[4mhttps://docs.docker.com/engin
 
 echo ''
 echo '\e[1;34;1mRemove previous outadated docker\e[0m'
-apt remove -y docker docker.io containerd runc
+apt remove -y docker docker.io containerd runc || true
 
 echo ''
 echo '\e[1;34;1mRemove previous outadated docker engine\e[0m'
